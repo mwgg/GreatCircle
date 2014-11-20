@@ -29,7 +29,9 @@ Class GreatCircle {
         $brng = atan2($y, $x);
         $brng = $brng * (180 / pi());
         
-        return ($brng + 360);
+        if ( $brng < 0 ) { $brng += 360; }
+        
+        return $brng;
     }
 
     // Takes one set of geographic coordinates in decimal degrees, azimuth and distance to produce a new set of coordinates, specified distance and bearing away from original.
