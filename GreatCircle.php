@@ -14,7 +14,7 @@ Class GreatCircle {
     }
 
     // Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line.
-    // Optionally takes a fifth argument with Earth radius, which will produce output in the same units as the passed radius.
+    // Optionally takes a fifth argument with one of the predefined units of measurements, or planet radius in custom units.
     public static function distance($lat1, $lon1, $lat2, $lon2, $unit = KM) {
         $r = self::validateRadius($unit);
         $lat1 = deg2rad($lat1);
@@ -47,7 +47,7 @@ Class GreatCircle {
     }
 
     // Takes one set of geographic coordinates in decimal degrees, azimuth and distance to produce a new set of coordinates, specified distance and bearing away from original.
-    // Optionally takes a fifth argument with Earth radius, which will produce output in the same units as the passed radius.
+    // Optionally takes a fifth argument with one of the predefined units of measurements or planet radius in custom units.
     public static function destination($lat1, $lon1, $brng, $dt, $unit = KM) {
         $r = self::validateRadius($unit);
         $lat1 = deg2rad($lat1);
