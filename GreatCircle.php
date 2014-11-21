@@ -2,9 +2,8 @@
 Class GreatCircle {
 
     // Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line.
-    public static function distance($lat1, $lon1, $lat2, $lon2) {
-        $r = 6371; // Earth radius in KM. Use radius in different units for results in those units.
-        
+    // Optionally takes a fifth argument with Earth radius, which will produce output in the same units as the passed radius.
+    public static function distance($lat1, $lon1, $lat2, $lon2, $r = 6371) {
         $lat1 = deg2rad($lat1);
         $lon1 = deg2rad($lon1);
         $lat2 = deg2rad($lat2);
@@ -35,9 +34,8 @@ Class GreatCircle {
     }
 
     // Takes one set of geographic coordinates in decimal degrees, azimuth and distance to produce a new set of coordinates, specified distance and bearing away from original.
-    public static function destination($lat1, $lon1, $brng, $dt) {
-        $r = 6371; // Earth radius in KM.
-        
+    // Optionally takes a fifth argument with Earth radius, which will produce output in the same units as the passed radius.
+    public static function destination($lat1, $lon1, $brng, $dt, $r = 6371) {
         $lat1 = deg2rad($lat1);
         $lon1 = deg2rad($lon1);
         $lat3 = asin(sin($lat1) * cos($dt / $r) + cos($lat1) * sin($dt / $r) * cos(deg2rad($brng)));
