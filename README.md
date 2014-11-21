@@ -28,7 +28,7 @@ echo GreatCircle::distance(90, 0, -90, 0, 3389.5);
 // Output: 10648.428299343
 ```
 ```php
-// Distance between Moscow and New York in [furlongs](https://en.wikipedia.org/wiki/Furlong) (31670.092 is Earth radius in furlongs)
+// Distance between Moscow and New York in furlongs (31670.092 is Earth radius in furlongs)
 echo GreatCircle::distance(55.75, 37.616667, 40.7127, -74.0059, 31670.092);
 // Output: 37335.295755141
 ```
