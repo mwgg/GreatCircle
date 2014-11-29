@@ -1,13 +1,23 @@
 GreatCircle
 ===========
-A set of three functions, useful in geographical calculations of different sorts. Available for PHP and Python. PHP version is used in the examples.
+A set of three functions, useful in geographical calculations of different sorts. Available for PHP, Python and Javascript.
 
 ####Distance
 Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line. Output in kilometers by default.
+
+PHP:
 ```php
 // Distance from London to Paris
 echo GreatCircle::distance(51.507222, -0.1275, 48.8567, 2.3508);
 // Output: 343.46748684413
+```
+Python:
+```python
+print( GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508) )
+```
+JavaScript:
+```javascript
+document.write ( GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508) );
 ```
 Optional fifth argument allows to specify desired units:
 * KM - kilometers
