@@ -2,6 +2,8 @@ GreatCircle
 ===========
 A set of three functions, useful in geographical calculations of different sorts. Available for PHP, Python and Javascript.
 
+[Live demo](http://mw.gg/gc/) of the JavaScript implementation.
+
 ####Distance
 Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line. Output in kilometers by default.
 
