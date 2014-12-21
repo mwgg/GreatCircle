@@ -30,7 +30,7 @@ Optional fifth argument allows to specify desired units:
 
 ```php
 // Distance from JFK airport to La Guardia airport in feet
-echo GreatCircle::distance(40.63980103, -73.77890015, 40.77719879, -73.87259674, FT);
+echo GreatCircle::distance(40.63980103, -73.77890015, 40.77719879, -73.87259674, "FT");
 // Output: 56425.612628758
 ```
 The optional argument can also be passed in form of planet radius in any unit, to produce output in this unit.
@@ -63,7 +63,7 @@ Just like Distance, Destination assumes entered distance is in kilometers, but t
 ```php
 // Coordinates of a location 500 nautical miles away from Paris, traveling in the direction of New York
 $brg = GreatCircle::bearing(48.8567, 2.3508, 40.7127, -74.0059);
-$dest = GreatCircle::destination(48.8567, 2.3508, $brg, 500, NM);
+$dest = GreatCircle::destination(48.8567, 2.3508, $brg, 500, "NM");
 printf("Latitude: %f, Longitude: %f", $dest["LAT"], $dest["LON"]);
 // Output: Latitude: 51.306719, Longitude: -10.071875
 ```
