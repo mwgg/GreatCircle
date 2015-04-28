@@ -1,6 +1,6 @@
 GreatCircle
 ===========
-A set of three functions, useful in geographical calculations of different sorts. Available for PHP, Python and Javascript.
+A set of three functions, useful in geographical calculations of different sorts. Available for PHP, Python, Javascript and Ruby.
 
 [Live demo](http://mw.gg/gc/) of the JavaScript implementation.
 
@@ -20,6 +20,10 @@ print( GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508) )
 JavaScript:
 ```javascript
 document.write ( GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508) );
+```
+Ruby
+```ruby
+puts GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508)
 ```
 Optional fifth argument allows to specify desired units:
 * KM - kilometers
