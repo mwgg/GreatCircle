@@ -52,3 +52,9 @@ var GreatCircle = {
     }
 
 }
+
+if (typeof module != 'undefined' && module.exports) {
+    module.exports = GreatCircle;
+} else {
+    window['GreatCircle'] = GreatCircle;
+}
