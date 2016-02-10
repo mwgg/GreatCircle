@@ -4,6 +4,15 @@ A set of three functions, useful in geographical calculations of different sorts
 
 [Live demo](http://mw.gg/gc/) of the JavaScript implementation.
 
+### Usage with node.js
+Install npm module `great-circle`
+```
+npm install great-circle
+```
+Usage in node.js or with browserify
+```javascript
+var GreatCircle = require('great-cirlce')
+```
 ####Distance
 Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line. Output in kilometers by default.
 
