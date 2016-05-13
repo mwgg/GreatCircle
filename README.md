@@ -11,7 +11,7 @@ npm install great-circle
 ```
 Usage in node.js or with browserify
 ```javascript
-var GreatCircle = require('great-cirlce')
+var GreatCircle = require('great-circle')
 ```
 ####Distance
 Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line. Output in kilometers by default.
