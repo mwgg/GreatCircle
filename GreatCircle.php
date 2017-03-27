@@ -1,6 +1,7 @@
 <?php
 Class GreatCircle {
 
+    const M = 6371009;
     const KM = 6371.009;
     const MI = 3958.761;
     const NM = 3440.070;

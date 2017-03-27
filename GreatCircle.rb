@@ -62,7 +62,7 @@ class GreatCircle
 
   # radius of earth
   def self.get_radius(unit)
-    radius = { 'KM' => 6371.009, 'MI' => 3958.761, 'NM' => 3440.070, 'YD' => 6967420, 'FT' => 20902260 }
+    radius = { 'M' => 6371009, 'KM' => 6371.009, 'MI' => 3958.761, 'NM' => 3440.070, 'YD' => 6967420, 'FT' => 20902260 }
 
     radius[unit] || unit
   end

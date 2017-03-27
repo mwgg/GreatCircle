@@ -35,6 +35,7 @@ Ruby
 puts GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508)
 ```
 Optional fifth argument allows to specify desired units:
+* M - meters
 * KM - kilometers
 * MI - miles
 * NM - nautical miles
