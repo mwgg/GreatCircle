@@ -1,6 +1,6 @@
 {
   "name": "great-circle",
-  "version": "0.0.0",
+  "version": "0.28",
   "description": "A library to calculate great circle distance, bearing, and destination between geographic coordinates.",
   "main": "GreatCircle.js",
   "scripts": {
