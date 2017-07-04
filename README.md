@@ -13,7 +13,7 @@ Usage in node.js or with browserify
 ```javascript
 var GreatCircle = require('great-circle')
 ```
-#### Distance
+### Distance
 Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line. Output in kilometers by default.
 
 PHP:
@@ -58,14 +58,14 @@ echo GreatCircle::distance(90, 0, -90, 0, 3389.5);
 echo GreatCircle::distance(55.75, 37.616667, 40.7127, -74.0059, 31670.092);
 // Output: 37335.295755141
 ```
-#### Bearing
+### Bearing
 Takes two sets of geographic coordinates in decimal degrees and produces bearing (azimuth) from the first set of coordinates to the second set.
 ```php
 // Bearing from Paris to London in decimal degrees
 echo GreatCircle::bearing(48.8567, 2.3508, 51.507222, -0.1275);
 // Output: 330.03509575101
 ```
-#### Destination
+### Destination
 Takes one set of geographic coordinates in decimal degrees, azimuth and distance to produce a new set of coordinates, specified distance and bearing away from original.
 ```php
 // Coordinates of a location 100 KM away from Paris, traveling in the direction of London
