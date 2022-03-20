@@ -17,11 +17,11 @@ var GreatCircle = require('great-circle')
 ### Usage with Go
 Install the module
 ```
-go get github.com/mwgg/GreatCircle/Go
+go get github.com/mwgg/GreatCircle
 ```
 Import the module and use. Note that due to lack of support for optional arguments and overloading, the unit/radius argument is not optional in Go, and needs to be passed as either `GreatCircle.UnitFixed(string)` or `GreatCircle.UnitValue(float)`
 ```go
-import GreatCircle "github.com/mwgg/GreatCircle/Go"
+import "github.com/mwgg/GreatCircle"
 GreatCircle.Distance(51.507222, -0.1275, 48.8567, 2.3508, GreatCircle.UnitFixed("KM"))
 GreatCircle.Distance(51.507222, -0.1275, 48.8567, 2.3508, GreatCircle.UnitValue(6371.009))
 ```
