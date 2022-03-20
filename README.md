@@ -1,6 +1,6 @@
 GreatCircle
 ===========
-A set of three functions, useful in geographical calculations of different sorts. Available for PHP, Python, Javascript and Ruby.
+A set of three functions, useful in geographical calculations of different sorts. Available for PHP, Python, Javascript, Ruby and Go.
 
 [Live demo](http://mw.gg/gc/) of the JavaScript implementation.
 
@@ -13,6 +13,19 @@ Usage in node.js or with browserify
 ```javascript
 var GreatCircle = require('great-circle')
 ```
+
+### Usage with Go
+Install the module
+```
+go get github.com/mwgg/GreatCircle/Go
+```
+Import the module and use. Note that due to lack of support for optional arguments and overloading, the unit/radius argument is not optional in Go, and needs to be passed as either `GreatCircle.UnitFixed(string)` or `GreatCircle.UnitValue(float)`
+```go
+import GreatCircle "github.com/mwgg/GreatCircle/Go"
+GreatCircle.Distance(51.507222, -0.1275, 48.8567, 2.3508, GreatCircle.UnitFixed("KM"))
+GreatCircle.Distance(51.507222, -0.1275, 48.8567, 2.3508, GreatCircle.UnitValue(6371.009))
+```
+
 ### Distance
 Takes two sets of geographic coordinates in decimal degrees and produces distance along the great circle line. Output in kilometers by default.
 
@@ -34,7 +47,11 @@ Ruby
 ```ruby
 puts GreatCircle.distance(51.507222, -0.1275, 48.8567, 2.3508)
 ```
-Optional fifth argument allows to specify desired units:
+Go
+```go
+fmt.Println(GreatCircle.Distance(51.507222, -0.1275, 48.8567, 2.3508, GreatCircle.UnitFixed("KM")))
+```
+The fifth argument (optional in some implementations) and allows to specify desired units, and it can also be passed in form of planet radius in any unit, to produce output in this unit.
 * M - meters
 * KM - kilometers
 * MI - miles
@@ -47,7 +64,6 @@ Optional fifth argument allows to specify desired units:
 echo GreatCircle::distance(40.63980103, -73.77890015, 40.77719879, -73.87259674, "FT");
 // Output: 56425.612628758
 ```
-The optional argument can also be passed in form of planet radius in any unit, to produce output in this unit.
 ```php
 // Distance between North and South poles on Mars (3389.5 is mean radius of Mars in kilometers)
 echo GreatCircle::distance(90, 0, -90, 0, 3389.5);
